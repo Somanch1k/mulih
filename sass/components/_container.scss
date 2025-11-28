@@ -1,0 +1,11 @@
+@use "../utils/mixins" as *;
+
+.container {
+  padding: 0 20px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include small-screen{
+    padding: 0 60px;
+  }
+}
