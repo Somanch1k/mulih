@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include large-screen{
+       justify-content: center;
+    }
 }
 
 .nav__list{
@@ -23,6 +27,11 @@
         order: 2;
         margin: 0;
     }
+    @include large-screen{
+        gap: 48px;
+        margin-right: 32px;
+        margin-left: 216px;
+    }
 }
 
 .nav__link{
@@ -32,6 +41,10 @@
     line-height: 144%;
     letter-spacing: 0.03em;
     color: #8e8e8e;
+
+    @include medium-screen{
+       font-size: 18px;
+    }
 }
 
 .logo{
@@ -48,6 +61,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include medium-screen{
+       width: 40px;
+       height: 40px; 
+    }
 }
 
 .logo a{
@@ -68,10 +86,14 @@
 .symbol{
     font-family: "Poppins", sans-serif;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 142%;
     letter-spacing: 0.02em;
     color: $base__color;
+
+    @include medium-screen{
+       font-size: 24px;
+    }
 }
 
 .button{
@@ -89,16 +111,23 @@
     padding: 8px 20px 8px;
     width: 80px;
     height: 29px;
-    background-color: #f5f5f5;
+    background-color: $background-color;
     border: none;
     font-weight: 500;
     font-size: 10px;
     line-height: 150%;
     letter-spacing: 0em;
     color: #69b99d;
+
+    @include button_bigger{
+       font-size: 16px;
+       padding: 16px 48px 15px;
+       width: 151px;
+        height: 55px;
+    }
 }
 
 .primary{
     background-color: #69b99d;;
-    color: #f5f5f5;;
+    color: $background-color;;
 }
