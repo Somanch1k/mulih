@@ -25,6 +25,7 @@ ol {
 
 .header {
   padding-block: 32px;
+  background-color: #f5f5f5;
 }
 
 .navigation {
@@ -129,7 +130,7 @@ ol {
   background-position: bottom right;
   background-color: #f5f5f5;
   background-size: contain;
-  background-image: url(../../assets/img/house_background.png);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url(../../assets/img/house_background.png);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,6 +141,11 @@ ol {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .hero_container {
+    text-align: left;
+  }
 }
 
 .hero__title {
@@ -176,7 +182,6 @@ ol {
 }
 
 .buy__form {
-  margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -185,26 +190,42 @@ ol {
 
 .form__div {
   display: flex;
-  flex-direction: column;
   background-color: #fefeff;
+  box-shadow: 35px 35px 65px 0 rgba(146, 106, 120, 0.16);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper__option {
+    margin-left: 10px;
+  }
 }
 
 .location__form {
   background-color: #fefeff;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .location__form {
+    flex-direction: row;
+  }
 }
 
 .form__label {
+  display: inline-block;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 144%;
   letter-spacing: 0em;
   color: #1f2744;
-}
-
-.option {
   margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .form__label {
+    margin: 0;
+  }
 }
 
 .first {
@@ -213,7 +234,6 @@ ol {
 
 .form__select {
   font-family: "Poppins", sans-serif;
-  margin-top: 5px;
   border: none;
   text-align: center;
   font-weight: 400;
@@ -221,6 +241,14 @@ ol {
   line-height: 144%;
   letter-spacing: 0em;
   color: #a6a6a6;
+}
+.form__select:focus {
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .form__select {
+    text-align: left;
+  }
 }
 
 .form__search_button {
@@ -236,8 +264,15 @@ ol {
   border: none;
   margin-top: 20px;
 }
+@media screen and (min-width: 768px) {
+  .form__search_button {
+    margin: 0;
+    margin-left: 15px;
+  }
+}
 
 .buy__button {
+  display: inline-block;
   margin: 0;
   background-color: #fefeff;
   padding: 6px 18px;

@@ -15,15 +15,3 @@
         @content;
     }
 }
-
-@mixin nav_order_change{
-    @media screen and (min-width:716px) {
-        @content;
-    }
-}
-
-@mixin button_bigger{
-    @media screen and (min-width:950px) {
-        @content;
-    }
-}
