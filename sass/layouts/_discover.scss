@@ -1,0 +1,18 @@
+@use "../utils/mixins" as *;
+@use "../utils/base" as *;
+@use "../utils/variables" as *;
+
+.learn_more{
+    display: flex;
+    align-items: center;
+}
+
+.descr__div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discover_description{
+    margin: 0;
+}
