@@ -1,0 +1,95 @@
+@use "../utils/mixins" as *;
+@use "../utils/base" as *;
+@use "../utils/variables" as *;
+
+.advante{
+    padding: 40px 0;
+
+    @include large-screen{
+        padding: 80px 0;
+    }
+}
+
+.advante_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+
+    @include large-screen{
+        display: block;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+.advante__subtitle{
+    margin-top: 16px;
+    font-family: "Rubik", sans-serif;;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 117%;
+    letter-spacing: 0.01em;
+    color: #1f2744;
+
+    @include medium-screen{
+        font-size: 36px;
+    }
+
+    @include large-screen{
+        font-size: 48px;
+        max-width: 436px;
+        margin-top: 16px;
+    }
+}
+
+.advante__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 24px;
+
+    @include large-screen{
+        margin-top: 48px;
+    }
+}
+
+.advante__list li{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 376px;
+}
+
+.advante__list__title{
+    font-family: $font-title;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 136%;
+    letter-spacing: 0.02em;
+    color: #054457;
+    margin-top: 8px;
+
+    @include large-screen{
+        font-size: 28px;
+        margin-top: 16px;
+    }
+}
+
+.advante__list__description{
+    margin-top: 8px;
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    color: #73788c;
+    text-align: left;
+
+    @include large-screen{
+        font-size: 16px;
+        margin-top: 16px;
+    }
+}

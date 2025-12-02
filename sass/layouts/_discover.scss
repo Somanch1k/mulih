@@ -5,6 +5,10 @@
 
 .discover{
     padding: 60px 0;
+
+    @include large-screen{
+        padding: 120px 0;
+    }
 }
 
 .discover_container{
@@ -120,6 +124,7 @@
     @include large-screen{
         gap: 0px;
         justify-content: space-between;
+        margin-top: 48px;
     }
 }
 
@@ -213,6 +218,7 @@
     color: #69b99d;
     margin-top: 18px;
     background-color: $base__color;
+    cursor: pointer;
 
     @include large-screen{
         font-size: 16px;
