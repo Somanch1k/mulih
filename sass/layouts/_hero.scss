@@ -12,9 +12,6 @@
         rgba(255,255,255,0.5)
         ),
         url(../../assets/img/house_background.png);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     @include large-screen{
         background-image: linear-gradient(
@@ -30,7 +27,7 @@
     align-items: center;
     text-align: center;
 
-    @include medium-screen{
+    @include large-screen{
         text-align: left;
         align-items: flex-start;
     }
@@ -42,7 +39,6 @@
     background-color: #f8f9fe;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    // font-size: 18px;
     font-size: 12px;
     line-height: 144%;
     letter-spacing: 0.03em;
@@ -52,6 +48,10 @@
      @include medium-screen{
         font-size: 16px;
         padding: 12px 24px;
+    }
+
+    @include large-screen{
+        font-size: 18px;
     }
 }
 
@@ -67,6 +67,12 @@
     @include medium-screen{
         font-size: 38px;
     }
+
+    @include large-screen{
+        font-size: 64px;
+        max-width: 605px;
+        margin-top: 32px;
+    }
 }
 
 .hero__description{
@@ -80,6 +86,12 @@
 
      @include medium-screen{
         font-size: 14px;
+    }
+
+    @include large-screen{
+        font-size: 16px;
+        margin-top: 24px;
+        max-width: 502px;
     }
 }
 
@@ -103,6 +115,10 @@
     }
 }
 
+.first{
+    margin: 0;
+}
+
 .location__form{
     background-color: $base__color;
     padding: 16px;
@@ -111,6 +127,11 @@
 
     @include medium-screen{
         flex-direction: row;
+    }
+
+    @include large-screen{
+        padding: 32px;
+        justify-content: flex-start;
     }
 }
 
@@ -126,6 +147,10 @@
 
     @include medium-screen{
         margin: 0;
+    }
+
+    @include large-screen{
+        font-size: 18px;
     }
 }
 
@@ -153,6 +178,11 @@
         text-align: left;
         margin-top: 8px;
     }
+
+    @include large-screen{
+        font-size: 18px;
+    }
+
 }
 
 .form__search_button{
@@ -173,6 +203,11 @@
         margin: 0;
         margin-left: 15px;
     }
+    @include large-screen{
+        padding: 18px 48px;
+        margin-left: 40px;
+        font-size: 16px;
+    }
 }
 
 .buy__button{
@@ -187,6 +222,11 @@
     color: #69b99d;
     font-family: "Poppins", sans-serif; 
     border: none;
+
+    @include large-screen{
+        padding: 12px 32px;
+        font-size: 24px ;
+    }
 }
 
 .rent{

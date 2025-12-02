@@ -2,17 +2,237 @@
 @use "../utils/base" as *;
 @use "../utils/variables" as *;
 
+
+.discover{
+    padding: 60px 0;
+}
+
+.discover_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include large-screen{
+        display: block;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+.discover__subtitle{
+    margin-top: 16px;
+    font-family: "Rubik", sans-serif;;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 116%;
+    letter-spacing: 0em;
+    color: #1f2744;
+
+    @include medium-screen{
+        font-size: 36px;
+    }
+
+    @include large-screen{
+        font-size: 48px;
+        margin-top: 16px;
+    }
+}
+
+.discover_description{
+    margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #73788c;
+
+     @include medium-screen{
+        font-size: 14px;
+    }
+
+    @include large-screen{
+        font-size: 16px;
+        max-width: 492px;
+    }
+}
+
 .learn_more{
     display: flex;
     align-items: center;
+    margin-top: 16px;
+}
+
+.learn__text{
+    font-family: $font-title;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 144%;
+    letter-spacing: 0.03em;
+    color: #69b99d; 
+
+    @include large-screen{
+        font-size: 18px;
+    }
+}
+
+.green__circle{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $primary__color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0 rgba(105, 185, 157, 0.58);
 }
 
 .descr__div{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    margin-top: 12px;
+
+    @include large-screen{
+        flex-direction: row;
+        margin-top: 16px;
+        justify-content: space-between;
+    }
 }
 
 .discover_description{
+    line-height: 163%;
     margin: 0;
+}
+
+.discover__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+    align-items: center;
+    gap: 16px;
+
+    @include medium-screen{
+        gap: 32px;
+    }
+    @include large-screen{
+        gap: 0px;
+        justify-content: space-between;
+    }
+}
+
+.discover__list li{
+    background-color: $base__color;
+    border: 1px solid #dedcda;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover__list li img{
+    max-width: 344px;
+    max-height: 238px;
+    width: 100%;
+    height: auto;
+}
+
+.list__title{
+    font-family: $font-title;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 133%;
+    letter-spacing: 0em;
+    color: #1f2744;
+    margin-top: 8px;
+
+    @include large-screen{
+        font-size: 24px;
+        margin-top: 16px;
+    }
+}
+
+.list__description{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 163%;
+    letter-spacing: 0em;
+    color: #a6a6a6;
+    margin-top: 6px;
+
+    @include large-screen{
+        font-size: 16px;
+        margin-top: 8px;
+    }
+}
+
+.price__div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 8px;
+
+    @include large-screen{
+        font-size: 16px;
+        gap: 32px;
+        justify-content: flex-start;
+    }
+}
+
+.price{
+    font-family: $font-title;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    letter-spacing: 0em;
+    color: #69b99d;
+
+    @include large-screen{
+        font-size: 24px;
+    }
+}
+
+.area__div{
+    display: flex;
+    align-items: center;
+    background-color: $background-color;
+    padding: 4px 8px;
+    gap: 5px;
+}
+
+.inquiry__button{
+    border: 1px solid #69b99d;
+    padding: 8px 24px;
+    font-family: $font-title;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #69b99d;
+    margin-top: 18px;
+    background-color: $base__color;
+
+    @include large-screen{
+        font-size: 16px;
+        margin-top: 36px;
+    }
+}
+
+.area__descr{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #1f2744;
+
+    @include large-screen{
+        font-size: 16px;
+    }
+}
+
+.secondary{
+    color: #a6a6a6;
 }
