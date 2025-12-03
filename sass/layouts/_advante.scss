@@ -3,7 +3,7 @@
 @use "../utils/variables" as *;
 
 .advante{
-    padding: 40px 0;
+    padding: 60px 0;
 
     @include large-screen{
         padding: 80px 0;
@@ -24,7 +24,7 @@
 }
 
 .advante__subtitle{
-    margin-top: 16px;
+    margin-top: 12px;
     font-family: "Rubik", sans-serif;;
     font-weight: 600;
     font-size: 28px;
@@ -58,6 +58,7 @@
 
 .advante__list li{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 20px;
     max-width: 376px;

@@ -1,0 +1,328 @@
+@use "../utils/mixins" as *;
+@use "../utils/base" as *;
+@use "../utils/variables" as *;
+
+.about{
+    padding: 80px 0 60px;
+    background-color: $base__color;
+
+    @include medium-screen{
+        padding: 120px 0 60px;;
+    }
+
+    @include large-screen{
+        padding: 216px 0 60px;;
+    }
+}
+
+.about_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include medium-screen{
+        display: block;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+.about__wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 120px;
+
+    @include medium-screen{
+        flex-direction: row;
+    }
+
+    @include large-screen{
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+.about__title{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8f9fe;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 144%;
+    letter-spacing: 0.03em;
+    color: #69b99d;
+    text-transform: uppercase;
+
+     @include medium-screen{
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    @include large-screen{
+        font-size: 18px;
+    }
+}
+
+.about__subtitle{
+    margin-top: 12px;
+    font-family: "Rubik", sans-serif;;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 117%;
+    letter-spacing: 0.01em;
+    color: #1f2744;
+    max-width: 527px;
+
+    @include medium-screen{
+        font-size: 36px;
+    }
+
+    @include large-screen{
+        font-size: 48px;
+        margin-top: 16px;
+    }
+}
+
+.about__description{
+    margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #73788c;
+    max-width: 505px;
+
+     @include medium-screen{
+        font-size: 14px;
+    }
+
+    @include large-screen{
+        margin-top: 16px;
+        font-size: 16px;
+    }
+}
+
+.about__button{
+    background: #69b99d;
+    padding: 8px 24px;
+    font-family: "Poppins", sans-serif;     
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+
+    @include large-screen{
+        margin-top: 48px;
+        padding: 18px 48px; 
+        font-size: 16px;
+    }
+}
+
+.rating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 20px;
+    max-width: 174px;
+    max-height: 236px;
+    background-color: $base__color;
+    box-shadow: 35px 35px 65px 0 rgba(146, 106, 120, 0.16);
+    position: absolute;
+    top: -72px;
+    left: 45px;
+
+    @include large-screen{
+        top: -96px;
+        left: 96px;
+        padding: 32px;
+    }
+}
+
+.rating__list{
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+
+    @include large-screen{
+        margin-top: 8px;
+    }
+}
+
+.rating__list li img{
+    width: 16px;
+    height: 16px;
+
+    @include large-screen{
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.tick{
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 0 38px 0 rgba(105, 185, 157, 0.32);
+    position: absolute;
+    top: -10px;
+
+    @include large-screen{
+        left: 71px;
+        top: -16px;
+    }
+}
+
+.rating__mark{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 111%;
+    letter-spacing: 0em;
+    color: #054457;
+
+    @include large-screen{
+        font-size: 72px;
+        margin: 0;
+    }
+}
+
+.rating__descr{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #a6a6a6;
+    margin-top: 8px;
+
+    @include large-screen{
+        margin-top: 16px;
+        font-size: 16px;
+    }
+}
+
+.rating__reviews{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #054457;
+    margin-top: 2px;
+
+    @include large-screen{
+        font-size: 16px;
+    }
+}
+
+.about__img__div{
+    position: relative;
+    order: 2;
+
+    @include medium-screen{
+        order: 1;
+    }
+}
+
+.main__sales{
+    font-family: $font-title;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 121%;
+    letter-spacing: 0em;
+    color: #054457;
+
+    @include small-screen{
+        font-size: 32px
+    }
+
+    @include medium-screen{
+        font-size: 24px;
+    }
+
+    @include large-screen{
+        font-size: 48px;
+    }
+}
+
+.secondary__sales{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 163%;
+    letter-spacing: 0em;
+    color: #a6a6a6;
+    max-width: 60px;
+    margin-left: 8px;
+    text-align: left;
+
+    @include small-screen{
+        font-size: 14px;
+    }
+    @include medium-screen{
+        font-size: 12px;
+    }
+
+    @include large-screen{
+        font-size: 16px;
+        max-width: 72px;
+    }
+}
+
+.sales__list{
+    display: flex;
+    gap: 12px;
+    
+    @include small-screen{
+        gap: 24px;
+    }
+
+    @include medium-screen{
+        gap: 12px;
+        
+    }
+
+    @include large-screen{
+        gap: 32px;
+    }
+}
+
+.sales__list li{
+    display: flex;
+    align-items: center;
+}
+
+.sales__block{
+    padding: 8px 12px;
+    background-color: #fff;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+
+    @include small-screen{
+        padding: 12px 32px;
+    }
+
+    @include medium-screen{
+        padding: 8px 12px;
+    }
+    
+    @include large-screen{
+        padding: 12px 32px;
+    }
+}
+
+.main__about__sect{
+    order: 1;
+
+    @include medium-screen{
+        order: 2;
+    }
+}

@@ -5,6 +5,7 @@
 
 .discover{
     padding: 60px 0;
+    background-color: $base__color;
 
     @include large-screen{
         padding: 120px 0;
@@ -25,7 +26,7 @@
 }
 
 .discover__subtitle{
-    margin-top: 16px;
+    margin-top: 12px;
     font-family: "Rubik", sans-serif;;
     font-weight: 600;
     font-size: 28px;
@@ -57,6 +58,7 @@
     }
 
     @include large-screen{
+        margin-top: 16px;
         font-size: 16px;
         max-width: 492px;
     }
@@ -65,7 +67,12 @@
 .learn_more{
     display: flex;
     align-items: center;
+    gap: 8px;
     margin-top: 16px;
+
+    @include large-screen{
+        margin: 0;
+    }
 }
 
 .learn__text{
@@ -82,14 +89,19 @@
 }
 
 .green__circle{
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: $primary__color;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px 0 rgba(105, 185, 157, 0.58);
+
+    @include large-screen{
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .descr__div{
@@ -136,12 +148,6 @@
     flex-direction: column;
 }
 
-.discover__list li img{
-    max-width: 344px;
-    max-height: 238px;
-    width: 100%;
-    height: auto;
-}
 
 .list__title{
     font-family: $font-title;
