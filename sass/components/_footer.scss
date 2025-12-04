@@ -1,3 +1,228 @@
 @use "../utils/mixins" as *;
 @use "../utils/base" as *;
 @use "../utils/variables" as *;
+
+.footer{
+    padding: 50px 124px 70px;
+
+    @include large-screen{
+        padding: 75px 124px 100px;
+    }
+}
+
+.footer__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include footer_wide{
+        flex-direction: row;
+        align-items: start;
+    }
+}
+
+
+.footer__contact_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include footer_wide{
+        text-align: left;
+        align-items: start;
+    }
+}
+
+.footer__paragraph{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 163%;
+    letter-spacing: 0em;
+    color: #1f2744;
+    max-width: 344px;
+    margin-top: 16px;
+
+    @include medium-screen{
+        font-size: 16px;
+    }
+}
+
+.label__footer{
+    font-family: $font-title;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: #0b2e29;
+
+    @include medium-screen{
+        font-size: 20px;
+    }
+}
+
+.footer__form{
+    margin-top: 24px;
+}
+
+.email__input{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    color: #d7d7d7;
+    background-color: $base__color;
+    padding: 8px 16px;
+    border: none;
+    text-align: center;
+
+    &:focus{
+        border: none;
+    }   
+
+    @include medium-screen{
+        font-size: 16px;
+    }
+    @include large-screen{
+        text-align: left;
+    }
+}
+
+.send__button{
+    font-family: $font-title;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    color: $base__color;
+    box-shadow: 0 0 65px 0 rgba(105, 185, 157, 0.48);
+    background: #69b99d;
+    padding: 8px 21px;
+    border: none;
+    cursor: pointer;
+
+    @include medium-screen{
+        font-size: 16px;
+    }
+}
+
+.input__button{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @include footer_wide{
+        gap: 0;
+        flex-direction: row;
+    }
+}
+
+.main__service{
+    font-family: $font-title;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #0b2e29;
+
+    @include medium-screen{
+        font-size: 20px;
+    }
+}
+
+.secondary__service{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: #575757;
+
+    @include medium-screen{
+        font-size: 16px;
+    }
+}
+
+.service__list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer__wrapper{
+    display: flex;
+}
+
+.social__list{
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.social__div{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include footer_wide{
+        margin: 0;
+        align-items: start;
+        margin-left: 60px;
+    }
+    @include large-screen{
+        margin-left: 138px;
+    }
+}
+
+.follow{
+    font-family: $font-title;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #0b2e29;
+
+    @include medium-screen{
+        font-size: 20px;
+    }
+}
+
+.social__circle{
+    background-color: #f8f9f9;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lists__div{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    white-space: nowrap;
+
+    @include small-screen{
+        flex-direction: row;
+    }
+
+    @include footer_wide{
+        margin: 0;
+        text-align: left;
+        margin-left: 60px;
+    }
+
+    @include large-screen{
+        margin-left: 214px;
+        gap: 80px;
+    }
+}

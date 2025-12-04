@@ -4,7 +4,11 @@
 
 .review{
     background-color: $base__color;
-    padding: 60px 0 120px;
+    padding: 30px 0 60px;
+
+    @include large-screen{
+        padding: 60px 0 120px;
+    }
 }
 
 .review__container{
