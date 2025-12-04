@@ -1,0 +1,149 @@
+@use "../utils/mixins" as *;
+@use "../utils/base" as *;
+@use "../utils/variables" as *;
+
+.review{
+    background-color: $base__color;
+    padding: 60px 0 120px;
+}
+
+.review__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include medium-screen{
+        display: block;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+.learn_more__review{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.title__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @include medium-screen{
+        gap: 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.review__subtitle{
+    margin-top: 12px;
+    font-family: "Rubik", sans-serif;;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 117%;
+    letter-spacing: 0.01em;
+    color: #054457;
+    max-width: 504px;
+
+    @include medium-screen{
+        font-size: 36px;
+    }
+
+    @include large-screen{
+        font-size: 48px;
+        margin-top: 16px;
+    }
+}
+
+.img__wrapper{
+    display: flex;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.people__list{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+    gap: 32 px;
+
+    @include large-screen{
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+.people__list li{
+    padding: 24px;
+    max-width: 376px;
+    border: 1px solid #dedcda;
+}
+
+.paragraph__marked{
+    margin-top: 16px;
+    font-family: $font-title;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 156%;
+    letter-spacing: 0em;
+    color: #1f2744;
+
+    @include medium-screen{
+        margin-top: 24px;
+        font-size: 18px;
+    }
+}
+
+.paragraph{
+    margin-top: 14px;
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #1f2744; 
+    
+    @include medium-screen{
+        margin-top: 16px;
+        font-size: 16px;
+    }
+}
+
+.person__box{
+    display: flex;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.name{
+    font-family: $font-title;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 163%;
+    letter-spacing: 0.03em;
+    color: #0b2e29;
+
+    @include medium-screen{
+        font-size: 16px;
+    }
+}
+
+.profession{
+    font-family: $font-title;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 183%;
+    letter-spacing: 0.04em;
+    color: #767676;
+    margin-top: 4px;
+}

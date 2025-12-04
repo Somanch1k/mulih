@@ -73,7 +73,7 @@
     font-size: 28px;
     line-height: 117%;
     letter-spacing: 0.01em;
-    color: #1f2744;
+    color: #054457;
     max-width: 527px;
 
     @include medium-screen{
@@ -117,6 +117,7 @@
     color: #fff;
     border: none;
     margin-top: 20px;
+    box-shadow: 24px 24px 65px 0 rgba(81, 140, 119, 0.24);
     cursor: pointer;
 
     @include large-screen{
