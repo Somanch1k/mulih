@@ -22,6 +22,10 @@ ol {
   background-color: #f5f5f5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   display: block;
   padding: 0 20px;
@@ -185,6 +189,13 @@ ol {
   }
 }
 
+.service__list li {
+  transition: transform 0.3s ease;
+}
+.service__list li:not(:first-child):hover {
+  transform: scale(1.05);
+}
+
 .service__list {
   display: flex;
   flex-direction: column;
@@ -199,6 +210,13 @@ ol {
   display: flex;
   gap: 16px;
   margin-top: 16px;
+}
+
+.social__list li {
+  transition: transform 0.3s ease;
+}
+.social__list li:hover {
+  transform: scale(1.1);
 }
 
 .social__div {
@@ -274,6 +292,13 @@ ol {
 .header {
   padding-block: 32px;
   background-color: #f5f5f5;
+  top: 0;
+  z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    position: sticky;
+  }
 }
 
 .navigation {
@@ -320,12 +345,33 @@ ol {
 }
 
 .nav__link {
+  display: inline-block;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 144%;
   letter-spacing: 0.03em;
   color: #8e8e8e;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  left: 50%;
+  bottom: -8px;
+  opacity: 0;
+  background-color: #69b99d;
+}
+.nav__link::after:active {
+  opacity: 1;
+}
+.nav__link:hover {
+  color: #4ba586;
+  transform: translateY(-12px);
 }
 @media screen and (min-width: 1240px) {
   .nav__link {
@@ -370,6 +416,10 @@ ol {
 .primary {
   background-color: #69b99d;
   color: #f5f5f5;
+}
+
+#home {
+  scroll-margin-top: 120px;
 }
 
 .about {
@@ -500,6 +550,10 @@ ol {
   margin-top: 20px;
   box-shadow: 24px 24px 65px 0 rgba(81, 140, 119, 0.24);
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.about__button:hover {
+  transform: scale(1.1);
 }
 @media screen and (min-width: 1240px) {
   .about__button {
@@ -731,6 +785,10 @@ ol {
   }
 }
 
+#about {
+  scroll-margin-top: 50px;
+}
+
 .advante {
   padding: 60px 0;
 }
@@ -831,6 +889,10 @@ ol {
   }
 }
 
+#service {
+  scroll-margin-top: 50px;
+}
+
 .discover {
   padding: 60px 0;
   background-color: #fefeff;
@@ -903,6 +965,10 @@ ol {
   align-items: center;
   gap: 8px;
   margin-top: 16px;
+  transition: transform 0.3s ease;
+}
+.learn_more:hover {
+  transform: scale(1.1);
 }
 @media screen and (min-width: 1240px) {
   .learn_more {
@@ -1069,6 +1135,13 @@ ol {
   margin-top: 18px;
   background-color: #fefeff;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+.inquiry__button:hover {
+  background-color: #69b99d;
+  color: #f5f5f5;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 0 rgba(105, 185, 157, 0.58);
 }
 @media screen and (min-width: 1240px) {
   .inquiry__button {
@@ -1095,13 +1168,31 @@ ol {
   color: #a6a6a6;
 }
 
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .hero {
   padding: 33px 0 108px;
   background-repeat: no-repeat;
   background-position: bottom right;
   background-color: #f5f5f5;
   background-size: contain;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url(../../assets/img/house_background.png);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url(../assets/img/house_background.png);
 }
 @media screen and (min-width: 1240px) {
   .hero {
@@ -1154,6 +1245,7 @@ ol {
   line-height: 116%;
   letter-spacing: 0em;
   color: #1f2744;
+  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 @media screen and (min-width: 768px) {
   .hero__subtitle {
@@ -1165,6 +1257,7 @@ ol {
     font-size: 64px;
     max-width: 605px;
     margin-top: 32px;
+    animation: slide-in-left 1s both;
   }
 }
 
@@ -1296,6 +1389,10 @@ ol {
   border: none;
   margin-top: 20px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.form__search_button:hover {
+  transform: scale(1.1);
 }
 @media screen and (min-width: 768px) {
   .form__search_button {
@@ -1323,6 +1420,7 @@ ol {
   color: #69b99d;
   font-family: "Poppins", sans-serif;
   border: none;
+  cursor: pointer;
 }
 @media screen and (min-width: 1240px) {
   .buy__button {
@@ -1334,6 +1432,15 @@ ol {
 .rent {
   background-color: #f5f5f5;
   color: #a6a6a6;
+}
+
+#property {
+  scroll-margin-top: 70px;
+}
+@media screen and (min-width: 1240px) {
+  #property {
+    scroll-margin-top: 33px;
+  }
 }
 
 .review {
@@ -1364,6 +1471,10 @@ ol {
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: transform 0.3s ease;
+}
+.learn_more__review:hover {
+  transform: scale(1.1);
 }
 
 .title__div {
@@ -1493,4 +1604,8 @@ ol {
   letter-spacing: 0.04em;
   color: #767676;
   margin-top: 4px;
+}
+
+#contact {
+  scroll-margin-top: 90px;
 }/*# sourceMappingURL=main.css.map */

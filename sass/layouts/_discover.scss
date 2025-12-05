@@ -69,6 +69,12 @@
     align-items: center;
     gap: 8px;
     margin-top: 16px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1)
+    }
+
 
     @include large-screen{
         margin: 0;
@@ -225,6 +231,14 @@
     margin-top: 18px;
     background-color: $base__color;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+
+    &:hover{
+        background-color: #69b99d;
+        color: $background-color;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px 0 rgba(105, 185, 157, 0.58);
+    }
 
     @include large-screen{
         font-size: 16px;
@@ -248,3 +262,4 @@
 .secondary{
     color: #a6a6a6;
 }
+

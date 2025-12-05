@@ -119,6 +119,11 @@
     margin-top: 20px;
     box-shadow: 24px 24px 65px 0 rgba(81, 140, 119, 0.24);
     cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover{
+        transform: scale(1.1);
+    }
 
     @include large-screen{
         margin-top: 48px;
@@ -326,4 +331,8 @@
     @include medium-screen{
         order: 2;
     }
+}
+
+#about{
+    scroll-margin-top: 50px;
 }

@@ -148,6 +148,14 @@
     }
 }
 
+.service__list li{
+    transition: transform 0.3s ease;
+
+    &:not(:first-child):hover{
+        transform: scale(1.05);
+    }
+}
+
 .service__list{
     display: flex;
     flex-direction: column;
@@ -162,6 +170,14 @@
     display: flex;
     gap: 16px;
     margin-top: 16px;
+}
+
+.social__list li{
+    transition: transform 0.3s ease;
+
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
 .social__div{

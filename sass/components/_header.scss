@@ -4,6 +4,12 @@
 .header {
   padding-block: 32px;
   background-color: $background-color;
+  top: 0;
+  z-index: 100;
+
+  @include medium-screen{
+    position: sticky;
+  }
 }
 
 .navigation {
@@ -45,17 +51,42 @@
 }
 
 .nav__link {
+  display: inline-block;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 144%;
   letter-spacing: 0.03em;
   color: #8e8e8e;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &::after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    left: 50%;
+    bottom: -8px;
+    opacity: 0;
+    background-color: #69b99d;
+
+    &:active{
+      opacity: 1;
+    }
+  }
+
+  &:hover{
+    color: $primary__color;
+    transform: translateY(-12px);
+  }
 
   @include large-screen {
     font-size: 18px;
   }
 }
+
 
 .button {
   margin: 0 auto;
@@ -91,4 +122,9 @@
 .primary {
   background-color: #69b99d;
   color: $background-color;
+}
+
+
+#home{
+  scroll-margin-top: 120px;
 }

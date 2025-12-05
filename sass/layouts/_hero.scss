@@ -2,6 +2,30 @@
 @use "../utils/base" as *;
 @use "../utils/variables" as *;
 
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .hero{
     padding: 33px 0 108px;
     background-repeat: no-repeat;
@@ -11,7 +35,7 @@
     background-image: linear-gradient(
         rgba(255,255,255,0.5)
         ),
-        url(../../assets/img/house_background.png);
+        url(../assets/img/house_background.png);
 
     @include large-screen{
         background-image: linear-gradient(
@@ -62,7 +86,8 @@
     font-size: 28px;
     line-height: 116%;
     letter-spacing: 0em;
-    color: #1f2744;
+    color: #1f2744; 
+    animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
     @include medium-screen{
         font-size: 38px;
@@ -72,6 +97,7 @@
         font-size: 64px;
         max-width: 605px;
         margin-top: 32px;
+        animation: slide-in-left 1s both;
     }
 }
 
@@ -198,6 +224,11 @@
     border: none;
     margin-top: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover{
+        transform: scale(1.1);
+    }
 
     @include medium-screen{
         margin: 0;
@@ -222,6 +253,7 @@
     color: #69b99d;
     font-family: "Poppins", sans-serif; 
     border: none;
+    cursor: pointer;
 
     @include large-screen{
         padding: 12px 32px;
@@ -232,4 +264,11 @@
 .rent{
     background-color: $background-color;
     color: #a6a6a6;
+}
+
+#property{
+    scroll-margin-top: 70px;
+    @include large-screen{
+        scroll-margin-top: 33px;
+    }
 }
