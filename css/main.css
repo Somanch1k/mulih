@@ -1196,7 +1196,7 @@ html {
 }
 @media screen and (min-width: 1240px) {
   .hero {
-    background-image: linear-gradient(rgba(255, 255, 255, 0)), url(../../assets/img/house_background.png);
+    background-image: linear-gradient(rgba(255, 255, 255, 0)), url(../assets/img/house_background.png);
   }
 }
 
