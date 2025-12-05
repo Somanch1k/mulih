@@ -35,13 +35,13 @@
     background-image: linear-gradient(
         rgba(255,255,255,0.5)
         ),
-        url(../assets/img/house_background.png);
+        url(../assets/img/house_background.webp);
 
     @include large-screen{
         background-image: linear-gradient(
         rgba(255,255,255,0)
         ),
-        url(../assets/img/house_background.png);
+        url(../assets/img/house_background.webp);
     }
 }
 
