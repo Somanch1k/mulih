@@ -112,6 +112,12 @@
   letter-spacing: 0em;
   color: #69b99d;
   cursor: pointer;
+  transition: background-color 1s ease, color 1s ease;
+
+  &:hover{
+    color: $base__color;
+    background-color: #69b99d;
+  }
 
   @include large-screen {
     padding: 16px 48px;
@@ -122,6 +128,10 @@
 .primary {
   background-color: #69b99d;
   color: $background-color;
+
+  &:hover{
+    background-color: #579782;
+  }
 }
 
 
